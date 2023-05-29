@@ -1,0 +1,52 @@
+table,
+td,
+tr {
+	border: 1px solid #000000;
+}
+
+.class-title {
+	font-size: 50px;
+	/* 大きさ変更 */
+	color: red;
+	/* 文字の色 */
+	text-align: center;
+	/* 文字の位置 */
+}
+
+.class-category li {
+	color: black;
+}
+
+
+/* 文字の色を定義してください */
+
+.class-center {
+	border: solid;
+	border-color: black;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 5%;
+}
+
+.class-box {
+	width: 100px;
+	/*枠の指定*/
+	height: 100px;
+	/*枠の指定*/
+	background: skyblue;
+	/*色*/
+	cursor: pointer;
+	/*指定域のカーソルの表現*/
+	transition: 0.8s;
+	/*アニメーション*/
+}
+
+.circle {
+	background: pink;
+	border-radius: 50%;
+	/*角の削れ方*/
+	transform: rotate(360deg);
+	/*アニメーション*/
+}

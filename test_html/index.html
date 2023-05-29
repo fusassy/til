@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="script.js"></script>
+	<title>Practice</title>
+</head>
+
+<body>
+
+	<div>
+
+		<div class="class-title">
+			<h1>Hello_World_A</h1>
+		</div>
+
+		<div class="class-center">
+			<div>
+				<h3>Hello_World_B</h3>
+			</div>
+
+
+			<div class="class-category">
+				<label>カテゴリ１</label>
+				<br>
+				<ol>
+					<li>あいうえお</li>
+					<li>かきくけこ</li>
+				</ol>
+			</div>
+
+			<div class="class-category">
+				<label>カテゴリ２</label>
+				<br>
+				<ul>
+					<li>さしすせそ</li>
+					<li>たちつてと</li>
+				</ul>
+			</div>
+		</div>
+
+		<hr>
+		<div>
+			<label>
+				アラートボタン
+			</label>
+			<br>
+			<button onclick="alertFunc()">ボタン</button>
+		</div>
+
+		<hr>
+		<div>
+			<label>入力文字を出力</label>
+			<form name="form" id="FontForm" action="">
+				<input name="textBox1" id="InTextBox" type="text" value="" />
+				<input type="button" value="出力" onclick="outputFunc()" />
+			</form>
+			<div>
+				出力：<span id="OutTextBox"></span>
+			</div>
+		</div>
+
+		<hr>
+		<div>
+			<label>
+				入力文字を出力(空白はエラー)
+			</label>
+			<form name="form" id="inputForm" action="">
+				<input name="textBox1" id="textBox" type="text" value="" />
+				<input type="button" value="出力" onclick="inputFunc()" />
+			</form>
+			<div>
+				出力：<span id="outputCheck"></span>
+				<br>
+				文字数：<span id="len"></span>
+				<br>
+				ログ：<span id="error"></span>
+			</div>
+
+			<hr>
+			<div>
+				<label>入力文字を計算</label>
+				<form name="form2" id="calc" action="">
+					<input name="textBox1" id="calcNum1" type="number" value="" />
+					<input name="textBox1" id="calcNum2" type="number" value="" />
+					<input type="button" value="出力" onclick="inputCalc()" />
+				</form>
+				<div>
+					出力(+)：<span id="outputPlus"></span><br>
+					出力(−)：<span id="outputMinus"></span><br>
+					出力(×)：<span id="outputMulti"></span><br>
+					出力(÷)：<span id="outputDiv"></span><br>
+					ログ：<span id="outputLog"></span>
+				</div>
+			</div>
+
+			<hr>
+			<div>
+				<label>
+					おまけ：テーブル出力
+				</label>
+				<div>
+					<button onclick="tableOutput()">テーブル出力</button>
+				</div>
+				<div>
+					<table id="tableOutput"></table>
+				</div>
+			</div>
+
+			<hr>
+			<div>
+				<label>図形をクリック</label>
+				<div id="target" class="class-box" onclick="shapeChange()"></div>
+			</div>
+
+			<div>
+				<a href="https://www.google.co.jp/" target="_blank" rel="noopener noopener">Google Link</a>
+			</div>
+
+		</div>
+
+</body>
+
+</html>
