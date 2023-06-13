@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>sap</title>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+	<script>
+		$(function () {
+			$('input:checkbox').change(function () {
+				var all = $('.accbox input:checkbox').length;
+				var cnt = $('.accbox input:checkbox:checked').length;
+				$('div.counter').text('解答：' + cnt + "/" + all);
+			}).trigger('change');
+		});
+	</script>
+	<style type="text/css">
+		.counter {
+			background: white;
+			margin: 0 10px 10px auto;
+			font-size: 18px;
+			width: 8rem;
+		}
+
+		.header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100px;
+		}
+
+		.footer {
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+
+		body {
+			width: 100%;
+			font-size: 14px;
+		}
+
+		.accbox {
+			margin-top: 50px;
+			padding: 0;
+			width: 90%;
+			/*最大幅*/
+			margin: 2em auto;
+		}
+
+		/*ラベル*/
+		.accbox label {
+			display: block;
+			margin: 1.5px 0;
+			padding: 13px 12px;
+			color: #333;
+			font-weight: bold;
+			background: #FFEEEF;
+			border: solid 1px #333;
+			cursor: pointer;
+			transition: all 0.5s;
+		}
+
+		/*アイコンを表示*/
+		.accbox label:before {
+			content: '+';
+			padding-right: 8px;
+		}
+
+		/*ラベルホバー時*/
+		.accbox label:hover {
+			background: #ffe9a9;
+		}
+
+		/*チェックは隠す*/
+		.accbox input {
+			display: none;
+		}
+
+		/*中身を非表示にしておく*/
+		.accbox .test-content {
+			height: 0;
+			padding: 0;
+			overflow: hidden;
+			opacity: 0;
+			transition: 0.8s;
+		}
+
+		/*クリックで中身表示*/
+		.test-check:checked+label+.test-content {
+			height: auto;
+			padding: 5px;
+			background: #fff5eb;
+			opacity: 1;
+		}
+
+		.accbox .test-content p {
+			margin: 15px 10px
+		}
+
+		/*アイコンを入れ替える*/
+		.test-check:checked+label:before {
+			content: '-';
+		}
+	</style>
+</head>
+
+<body>
+	<div class="footer">
+		<div class="counter"></div>
+	</div>
+	<!-- 設問ボックス -->
+	<div class="accbox">
+		<input id="testCheck1" class="test-check" type="checkbox">
+		<label class="test-label" for="testCheck1"> NO.1 テスト文章 <br>
+			テスト文章 <br>
+			<br>
+			選択肢：
+			　<br>
+			　A. テスト文章
+			　<br>
+			　B. テスト文章
+			　<br>
+			　C. テスト文章
+			　<br>
+			　D. テスト文章 </label>
+		<div class="test-content">
+			<p> 答え：
+				テスト文章 </p>
+		</div>
+		<!-- 設問ボックス -->
+		<input id="testCheck2" class="test-check" type="checkbox">
+		<label class="test-label" for="testCheck2"> NO.2 テスト文章
+			テスト文章 <br>
+			<br>
+			選択肢： <br>
+			　A. 回答 <br>
+			　B. 回答 <br>
+			　C. 回答 </label>
+		<div class="test-content">
+			<p> 答え：
+				テスト文章 </p>
+		</div>
+		<!-- 設問ボックス -->
+		<input id="testCheck3" class="test-check" type="checkbox">
+		<label class="test-label" for="testCheck3"> NO.3 テスト文章
+			テスト文章 <br>
+			<br>
+			選択肢： <br>
+			　A. 回答 <br>
+			　B. 回答 <br>
+			　C. 回答 </label>
+		<div class="test-content">
+			<p> 答え：
+				テスト文章 </p>
+		</div>
+
+	</div>
+</body>
+
+</html>
